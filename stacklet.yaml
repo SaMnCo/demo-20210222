@@ -1,11 +1,10 @@
 collections:
-  - name: "s3-encryption-20210222"
+  - name: "aws-s3-demo-enable-encryption-20210222"
     schedule: "rate(2 minutes)"
     accounts:
       # This is the only account that will work for now.
       - 434520683652
     regions:
       - us-east-2
-      - us-east-1
     policies:
       - aws-s3-demo-enable-encryption-20210222
