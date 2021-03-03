@@ -39,3 +39,35 @@ policies:
   filters:
       - type: bucket-encryption
         state: False
+
+- name: aws-ec2-demo-20210303
+  tags:
+    - Category::Security
+    - Compliance::APRA
+    - Compliance::GDPR
+    - Compliance::HIPAA
+    - Compliance::MAS
+    - Compliance::NIST 800-53
+    - Compliance::PCI DSS
+    - Risk::High
+  resource: ec2
+  metadata:
+    long-description: *long-description
+  description: *description
+
+
+- name: aws-rds-demo-20210303
+  tags:
+    - Category::Security
+    - Compliance::APRA
+    - Compliance::GDPR
+    - Compliance::HIPAA
+    - Compliance::MAS
+    - Compliance::NIST 800-53
+    - Compliance::PCI DSS
+    - Risk::High
+  resource: rds
+  metadata:
+    long-description: *long-description
+  description: *description
+

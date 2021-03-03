@@ -8,3 +8,18 @@ collections:
       - us-east-2
     policies:
       - aws-s3-demo-enable-encryption-20210222
+
+  - name: "asset-counter"
+    schedule: "rate(2 minutes)"
+    accounts:
+      # This is the only account that will work for now.
+      - 434520683652
+    regions:
+      - us-east-1
+      - us-east-2
+      - eu-west-1
+      - eu-west-2
+    policies:
+      - aws-ec2-demo-20210303
+      - aws-rds-demo-20210303
+
