@@ -22,4 +22,9 @@ collections:
     policies:
       - aws-ec2-demo-20210303
       - aws-rds-demo-20210303
+      - aws-codebuild-demo-20210303
+      - aws-lambda-demo-20210303
+      - aws-ecr-demo-20210303
+      - aws-step-machine-demo-20210303
+
 
