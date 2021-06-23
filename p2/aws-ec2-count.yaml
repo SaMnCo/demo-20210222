@@ -1,0 +1,28 @@
+
+vars:
+
+  long-description: &long-description |
+      This policy will verify that S3 buckets are using encryption so that
+      sensitive data is secure at rest. Many regulatory and compliance standards
+      require data encryption to be enabled across resources. If any S3 buckets
+      are found without encryption, the default server side encryption will be
+      enabled and a notification sent. This policy helps with compliance
+      standards such as APRA, GDPR, HIPAA, MAS, NIST 800-53 rev4 and PCI DSS by
+      identifying and remediating the non-compliant S3 buckets.
+
+  description: &description |
+      S3 buckets which are not utilizing Server Side Encryption (SSE) will be
+      identified, modified to use the aws/s3 KMS key, and the impacted users
+      will be notified.
+
+policies:
+- name: aws-ec2-in-p2-folder
+  tags:
+    - Category::Cost
+    - Compliance::HIPAA
+    - Compliance::PCI DSS
+    - Risk::Info
+  resource: ec2
+  metadata:
+    long-description: This policy scans for all EC2 instances
+  description: This policy scans for all RDS instances
